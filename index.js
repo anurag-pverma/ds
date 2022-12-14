@@ -16,8 +16,8 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 passportConfig(passport);
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
+app.get("/check", (req, res) => {
+  res.send({message:"this is home page"});
 });
 app.use("/", routes);
 
